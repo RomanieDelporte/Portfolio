@@ -16,14 +16,14 @@ export function Header() {
     return (
         <>
             <div className="flex items-center justify-around">
-                <div>
-                    <img
-                        src="/romanie.png"
-                        alt="Romanie logo"
-                        className="h-16 w-16 rounded-full"
-                    />
-                </div>
-                <nav className="bg-gray-50 p-4 rounded-xl flex justify-center ml-12">
+                {/*<div className="sm:hidden">*/}
+                {/*    <img*/}
+                {/*        src="/romanie.png"*/}
+                {/*        alt="Romanie logo"*/}
+                {/*        className="h-16 w-16 rounded-full"*/}
+                {/*    />*/}
+                {/*</div>*/}
+                <nav className="bg-gray-50 p-4 rounded-xl flex justify-center items-center ml-12 sm:ml-0 sm:flex-col">
                     <ul className="flex space-x-6">
                         {navItems.map((item) => (
                             <li key={item.title}>

@@ -5,7 +5,7 @@ function App() {
 
     return (
         <>
-            <div className="p-8">
+            <div className="w-full items-center justify-center">
                 <Header/>
             </div>
         </>
