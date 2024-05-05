@@ -12,7 +12,7 @@ const navItems: NavItem[] = [
 
 
 export function Header() {
-    const router = useRouter();
+
     return (
         <>
             <div className="flex items-center justify-around">
@@ -25,11 +25,11 @@ export function Header() {
                 </div>
                 <nav className="bg-gray-50 p-4 rounded-xl flex justify-center ml-12">
                     <ul className="flex space-x-6">
-                        {navItems.map(item => (
+                        {navItems.map((item) => (
                             <li key={item.title}>
                                 <a
                                     href={item.url}
-                                    className={router.pathname === item.url ? 'text-rose-400' : 'text-gray-600'}
+                                    className={`text-gray-600 hover:text-rose-400 ${window.location.pathname === item.url ? 'text-rose-400' : 'text-gray-500'}`}
                                 >
                                     {item.title}
                                 </a>
