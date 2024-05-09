@@ -1,9 +1,4 @@
-export default function Card({title, description, imageUrl, technologies}: {
-    title: string,
-    description: string,
-    imageUrl: string,
-    technologies: string[],
-}) {
+export default function Card({title, description, imageUrl, technologies}: CardData) {
     return (
         <div className="flex flex-col border-2 border-gray-30 w-[340px] max-w[340px] p-4 bg-white rounded-lg hover:shadow-md hover:ring-black hover:ring-opacity-30">
             <div className="flex items-center justify-center">
