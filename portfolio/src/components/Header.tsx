@@ -4,18 +4,17 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    {title: 'Home', url: '/'},
+    {title: '', url: '/'},
     {title: 'About', url: '/#about'},
-    {title: 'Projects', url: '/projects'},
-    {title: 'Contact', url: '/contact'},
+    {title: 'Projects', url: '/#projects'},
+    {title: 'Contact', url: '/#contact'},
 ];
 
 
 export function Header() {
-
     return (
         <>
-            <div className="flex items-center justify-evenly">
+            <div className="flex items-center justify-around">
                 <div className="sm:hidden bg-rose-100 rounded-full p-2">
                     <img
                         src="/portfolio-home.png"
@@ -29,7 +28,7 @@ export function Header() {
                             <li key={item.title}>
                                 <a
                                     href={item.url}
-                                    className={`text-gray-600 hover:text-rose-400 ${window.location.pathname === item.url ? 'text-rose-400' : 'text-gray-500'}`}
+                                    className={`text-gray-600 hover:text-rose-400 hover:bg-rose-200 p-2 ${window.location.pathname === item.url ? 'text-rose-400' : 'text-gray-500'}`}
                                 >
                                     {item.title}
                                 </a>

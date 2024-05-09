@@ -1,25 +1,17 @@
-import { Header } from "../components/Header.tsx";
-import { Footer } from "../components/Footer.tsx";
 import { ReactNode } from "react";
 
 interface LayoutProps {
     children: ReactNode;
 }
 
-export function Layout({children}: LayoutProps) {
+export default function Layout({children}: LayoutProps) {
 
 
     return (
-        <div className="min-h-screen flex flex-col w-full font-mono">
-            {/*<Header />*/}
-
-            <main className="container justify-center flex pl-64 font-mono">
+        <div className="flex flex-col w-full font-mono ">
+            <main className="container flex font-mono mx-auto px-44 py-8 sm:px-8 md:px-12 lg:px-16 xl:px-20">
                 {children}
             </main>
-
-            {/*<Footer />*/}
         </div>
     );
 };
-
-export default Layout;
