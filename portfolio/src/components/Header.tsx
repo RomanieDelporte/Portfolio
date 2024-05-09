@@ -1,3 +1,4 @@
+
 interface NavItem {
     title: string;
     url: string;
@@ -15,15 +16,15 @@ export function Header() {
 
     return (
         <>
-            <div className="flex items-center justify-around">
-                {/*<div className="sm:hidden">*/}
-                {/*    <img*/}
-                {/*        src="/romanie.png"*/}
-                {/*        alt="Romanie logo"*/}
-                {/*        className="h-16 w-16 rounded-full"*/}
-                {/*    />*/}
-                {/*</div>*/}
-                <nav className="bg-gray-50 p-4 rounded-xl flex justify-center items-center ml-12 sm:ml-0 sm:flex-col">
+            <div className="flex items-center justify-evenly">
+                <div className="sm:hidden bg-rose-100 rounded-full p-2">
+                    <img
+                        src="/portfolio-home.png"
+                        alt="Romanie logo"
+                        className="h-16 w-16 rounded-full"
+                    />
+                </div>
+                <nav className="flex">
                     <ul className="flex space-x-6">
                         {navItems.map((item) => (
                             <li key={item.title}>
