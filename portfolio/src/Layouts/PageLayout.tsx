@@ -7,15 +7,17 @@ interface LayoutProps {
 }
 
 export function Layout({children}: LayoutProps) {
-    return (
-        <div className="min-h-screen bg-rose-50">
-            <Header />
 
-            <main className="container mx-auto px-4 py-8">
+
+    return (
+        <div className="min-h-screen flex flex-col w-full font-mono">
+            {/*<Header />*/}
+
+            <main className="container justify-center flex pl-64 font-mono">
                 {children}
             </main>
 
-            <Footer />
+            {/*<Footer />*/}
         </div>
     );
 };

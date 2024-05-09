@@ -1,4 +1,3 @@
-
 interface NavItem {
     title: string;
     url: string;
@@ -6,7 +5,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     {title: 'Home', url: '/'},
-    {title: 'About', url: '/about'},
+    {title: 'About', url: '/#about'},
     {title: 'Projects', url: '/projects'},
     {title: 'Contact', url: '/contact'},
 ];
