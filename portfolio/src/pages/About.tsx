@@ -10,7 +10,7 @@ export default function About({text}: { text: string }) {
             setDisplayText(() => {
                 if (currentIndex === text.length) {
                     clearInterval(intervalId);
-                    return text; // Return the entire text when typing is complete
+                    return text;
                 }
                 currentIndex++;
                 return text.substring(0, currentIndex);

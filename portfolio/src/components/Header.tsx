@@ -18,7 +18,6 @@ export function Header({scrollToSection}: { scrollToSection: any }) {
 
     const handleScrollToSection = (url: string, index: number) => {
         const sectionId = url.substring(2);
-        console.log(sectionId)
         scrollToSection(sectionId);
         setActiveLink(index);
     };
