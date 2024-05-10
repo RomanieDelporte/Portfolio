@@ -13,6 +13,12 @@ export default {
         'xl': {'max': '1280px'},
         '2xl': {'max': '1535px'},
       },
+      colors: {
+        'primary': '#FF6363',
+        'secondary': {
+          100: '#FAF9F6',
+        },
+      },
     },
   },
   plugins: [],

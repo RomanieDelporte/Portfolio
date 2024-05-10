@@ -12,6 +12,12 @@ const cardData = (): CardData[] => {
             description: "Coming soon",
             technologies: [],
         },
+        {
+            imageUrl: "/portfolio-home.png",
+            title: "WIP 2",
+            description: "Coming soon",
+            technologies: [],
+        },
     ];
 }
 

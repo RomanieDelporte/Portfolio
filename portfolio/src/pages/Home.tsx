@@ -2,12 +2,23 @@ import '../App.css'
 import PageLayout from "../Layouts/PageLayout.tsx";
 import About from "./About.tsx";
 import Projects from "./Projects.tsx";
+import { Footer } from "../components/Footer.tsx";
+import { Header } from "../components/Header.tsx";
 
 
 function Home() {
 
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView();
+        }
+    };
+
+
     return (
         <>
+            <Header scrollToSection={scrollToSection} />
             <PageLayout>
                 <div className="flex-col flex">
                     <div
@@ -21,6 +32,8 @@ function Home() {
                     </div>
                 </div>
             </PageLayout>
+            <Footer />
+
         </>
     )
 }
