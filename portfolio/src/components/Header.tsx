@@ -6,7 +6,6 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    {title: '', url: '/'},
     {title: 'About', url: '/#about'},
     {title: 'Projects', url: '/#projects'},
     {title: 'Contact', url: '/#contact'},
@@ -22,17 +21,12 @@ export function Header({scrollToSection}: { scrollToSection: any }) {
         setActiveLink(index);
     };
 
-    const goHome = () => {
-        scrollToSection('/');
-        setActiveLink(0);
-    }
 
     return (
         <>
             <div className="flex items-center justify-center md:fixed bg-secondary-100 p-2 md:w-full md:justify-between lg:justify-between xl:justify-around">
                 <div
                     className="hidden sm:flex bg-rose-100 rounded-full p-2 cursor-pointer"
-                    onClick={goHome}
                 >
                     <img
                         src="/portfolio-home.png"
@@ -46,7 +40,7 @@ export function Header({scrollToSection}: { scrollToSection: any }) {
                             <li key={item.title}>
                                 <a
                                     href={item.url}
-                                    className={`text-gray-600 hover:text-rose-400 hover:bg-rose-200 p-2 ${activeLink === index ? 'text-rose-400' : 'text-gray-500'}`}
+                                    className={`text-gray-600 hover:text-rose-400 p-2 ${activeLink === index ? 'text-rose-400 border-b-4 border-rose-500' : 'text-gray-500'}`}
                                     onClick={() => handleScrollToSection(item.url, index)}
                                 >
                                     {item.title}
