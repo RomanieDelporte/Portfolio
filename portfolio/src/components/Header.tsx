@@ -22,10 +22,18 @@ export function Header({scrollToSection}: { scrollToSection: any }) {
         setActiveLink(index);
     };
 
+    const goHome = () => {
+        scrollToSection('/');
+        setActiveLink(0);
+    }
+
     return (
         <>
             <div className="flex items-center justify-center md:fixed bg-secondary-100 p-2 md:w-full md:justify-between lg:justify-between xl:justify-around">
-                <div className="hidden sm:flex bg-rose-100 rounded-full p-2">
+                <div
+                    className="hidden sm:flex bg-rose-100 rounded-full p-2 cursor-pointer"
+                    onClick={goHome}
+                >
                     <img
                         src="/portfolio-home.png"
                         alt="Romanie logo"
