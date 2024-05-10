@@ -14,7 +14,7 @@ export default function Card({title, description, imageUrl, technologies}: CardD
                 {technologies.map((technology) => (
                     <span
                         key={technology}
-                        className="text-xs bg-gray-100 hover:bg-rose-100 hover:text-rose-500 rounded-full p-2 mr-2"
+                        className="text-xs bg-gray-100 hover:bg-rose-100 cursor-pointer hover:text-rose-500 rounded-full p-2 mr-2"
                     >{technology}</span>
                 ))}
             </div>

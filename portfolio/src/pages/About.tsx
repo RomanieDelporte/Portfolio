@@ -32,8 +32,8 @@ export default function About({text}: { text: string }) {
     return (
         <>
             <PageLayout>
-                <div className="flex items-center mt-20 sm:mt-8 sm:items-start sm:flex-col md:items-center">
-                    <div className="w-6/12 flex flex-col justify-center md:justify-start">
+                <div className="flex flex-col mt-20 items-center md:flex-row">
+                    <div className="flex flex-col justify-center text-center md:w-6/12 md:text-start">
                         <h2 className="text-4xl font-medium text-rose-500">{displayText}</h2>
                         <h3 className="text-2xl font-medium flex flex-col truncate line-clamp-2 whitespace-pre-wrap">
                             Creative Frontend Developer that
@@ -52,7 +52,7 @@ export default function About({text}: { text: string }) {
                             ))}
                         </div>
                     </div>
-                    <div className="ml-auto sm:mt-8 sm:ml-0">
+                    <div className="mt-4 md:ml-auto">
                         <img
                             src="/portfolio-home.png"
                             alt="Romanie logo"
