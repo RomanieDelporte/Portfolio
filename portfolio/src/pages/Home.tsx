@@ -4,6 +4,7 @@ import About from "./About.tsx";
 import Projects from "./Projects.tsx";
 import { Footer } from "../components/Footer.tsx";
 import { Header } from "../components/Header.tsx";
+import Contact from "../components/Contact.tsx";
 
 
 function Home() {
@@ -29,6 +30,9 @@ function Home() {
                     </div>
                     <div id={"projects"}>
                         <Projects />
+                    </div>
+                    <div id={"contact"}>
+                        <Contact />
                     </div>
                 </div>
             </PageLayout>
