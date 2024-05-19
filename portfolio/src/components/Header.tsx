@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface NavItem {
     title: string;
@@ -20,6 +20,30 @@ export function Header({scrollToSection}: { scrollToSection: any }) {
         scrollToSection(sectionId);
         setActiveLink(index);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const aboutSection = document.getElementById('about').offsetTop;
+            const projectsSection = document.getElementById('projects').offsetTop;
+            const contactSection = document.getElementById('contact').offsetTop;
+
+            if (scrollPosition < aboutSection) {
+                setActiveLink(0);
+            } else if (scrollPosition >= aboutSection && scrollPosition < contactSection) {
+                setActiveLink(1);
+            } else {
+                setActiveLink(2);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
 
     return (

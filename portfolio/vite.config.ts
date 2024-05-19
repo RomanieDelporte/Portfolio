@@ -3,11 +3,14 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
-  return {
-    define: {
-      'process.env.REACT_APP_GITHUB_USERNAME': JSON.stringify(env.REACT_APP_GITHUB_USERNAME)
-    },
-    plugins: [react()],
-  }
+    const env = loadEnv(mode, process.cwd(), '');
+    return {
+        define: {
+            'process.env.REACT_APP_GITHUB_USERNAME': JSON.stringify(env.REACT_APP_GITHUB_USERNAME),
+            'process.env.REACT_APP_EMAILJS_SERVICE_ID': JSON.stringify(env.REACT_APP_EMAILJS_SERVICE_ID),
+            'process.env.REACT_APP_EMAILJS_TEMPLATE_ID': JSON.stringify(env.REACT_APP_EMAILJS_TEMPLATE_ID),
+            'process.env.REACT_APP_EMAILJS_PUBLIC_KEY': JSON.stringify(env.REACT_APP_EMAILJS_PUBLIC_KEY),
+        },
+        plugins: [react()],
+    }
 })
