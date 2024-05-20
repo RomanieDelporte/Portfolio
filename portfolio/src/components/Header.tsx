@@ -30,10 +30,12 @@ export function Header({scrollToSection}: { scrollToSection: any }) {
 
             if (scrollPosition < aboutSection) {
                 setActiveLink(0);
-            } else if (scrollPosition >= aboutSection && scrollPosition < contactSection) {
+            } else if (scrollPosition >= aboutSection && scrollPosition < projectsSection) {
                 setActiveLink(1);
-            } else {
+            } else if (scrollPosition >= projectsSection && scrollPosition < contactSection) {
                 setActiveLink(2);
+            } else {
+                setActiveLink(3);
             }
         };
 

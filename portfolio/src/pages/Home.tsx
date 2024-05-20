@@ -4,7 +4,7 @@ import About from "./About.tsx";
 import Projects from "./Projects.tsx";
 import { Footer } from "../components/Footer.tsx";
 import { Header } from "../components/Header.tsx";
-import Contact from "../components/Contact.tsx";
+import Contact from "./Contact.tsx";
 
 
 function Home() {
