@@ -27,10 +27,11 @@ export default function Contact() {
     return (
         <>
             <PageLayout>
-                <div className="flex flex-col mt-20 w-full">
+                <div className="flex flex-col mt-20 w-full mb-16 text-center">
                     <h2 className="text-2xl text-rose-500 text-center">Get in touch</h2>
+                    <h3 className="text-xl">Let's have a chat</h3>
                     <div className="mt-10 text-center">
-                        <h3 className="text-xl">Let's have a chat</h3>
+                        <p className="mt-10">Send us a mesage </p>
                         <form
                             className="mt-5 flex flex-col items-center w-full"
                             ref={form}
